@@ -48,10 +48,10 @@ fun Greeting(name: String) {
         "Bee", "Cat", "Cow", "Crocodile", "Elephant",
         "JellyFish", "Koala", "Snake", "Turtle", "Whale"
     )
-    Column(modifier = Modifier.fillMaxWidth()){
+    Column{
         Text(text = "Animal Collection : ")
 
-        LazyColumn(modifier = Modifier.fillMaxHeight()){
+        LazyColumn{
             items(50){ index->
                 Column(modifier = Modifier.fillParentMaxHeight()){
                     Text(text = animalsname[index])
