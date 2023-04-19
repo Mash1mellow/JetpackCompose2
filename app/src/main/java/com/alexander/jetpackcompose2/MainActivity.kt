@@ -54,9 +54,9 @@ fun Greeting(name: String) {
         LazyColumn{
             items(50){ index->
                 Column(modifier = Modifier.fillParentMaxHeight()){
-                    Text(text = animalsname[index])
+                    Text(text = animalsname[index % 10])
                     Image(
-                        painter = painterResource(id = animals[index]),
+                        painter = painterResource(id = animals[index % 10]),
                         contentDescription = "動物",
                     )
                 }
